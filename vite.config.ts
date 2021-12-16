@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
+/**
+ * @type {import('vite').UserConfig}
+ */
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
   resolve: {
     alias: {
       '@': '/src',
     }
   },
-  base: '/linggle/'
-})
+  base: mode === 'development' ? '/' : '/linggle/'
+}))
