@@ -5,7 +5,7 @@ function HomePage() {
   const [queryValue, setQueryValue] = useState<string>('')
   const navigate = useNavigate()
   function handleTextChange(e: ChangeEvent<HTMLInputElement>) {
-    setQueryValue(e.target.value.trim())
+    setQueryValue(e.target.value)
   }
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
