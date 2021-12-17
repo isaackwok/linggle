@@ -26,7 +26,14 @@ function SearchPage() {
         <input value={queryValue} onInput={handleTextChange} />
         <button type="submit">Submit</button>
       </form>
-      {!isLoading && !error && <LinggleResultTable data={results?.ngrams} />}
+      {
+        isLoading ?
+          <h2>Loading ...</h2> :
+          error ? 
+          <h2>Error Occured</h2> :
+          <LinggleResultTable data={results?.ngrams} />
+      }
+
     </div>
   )
 }
