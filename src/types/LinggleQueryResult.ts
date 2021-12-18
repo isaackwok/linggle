@@ -1,4 +1,4 @@
-interface LinggleQueryResult {
+type LinggleQueryResult = {
   query: string;
   time?: Date;
   ngrams: [[ngram: string, count: number]];
