@@ -29,9 +29,9 @@ function SearchPage() {
       {
         isLoading ?
           <h2>Loading ...</h2> :
-          error ? 
-          <h2>Error Occured</h2> :
-          <LinggleResultTable data={results?.ngrams} />
+          error ?
+            <h2>Error Occured</h2> :
+            <LinggleResultTable data={results?.ngrams} />
       }
 
     </div>

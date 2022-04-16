@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
-        <Route path="/" element={<HomePage /> } />
+        <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
